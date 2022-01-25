@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!-- <template id="pos_customer_restriction_assets_backend" name="pos_customer_restriction assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/pos_customer_restriction/static/src/js/pos_customer_restriction_fields.js"/></script>
+            <script type="text/javascript" src="/pos_customer_restriction/static/src/js/pos_customer_restriction_list.js"/></script>
+        </xpath>
+    </template> -->
+
+</odoo>

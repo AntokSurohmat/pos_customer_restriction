@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+        <record id="view_partner_property_form_available_in_pos" model="ir.ui.view">
+            <field name="name">res.partner.pos.form.inherit.available</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='barcode']" position="after">
+                    <field name="available_in_pos"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="view_partner_property_tree_available_in_pos" model="ir.ui.view">
+            <field name="name">res.partner.view.tree.inherit.available</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_tree"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='user_id']" position="after">
+                    <field name="available_in_pos" optional="show" widget="boolean_toggle"/>
+                </xpath>
+            </field>
+        </record>
+
+        <!-- <record id="view_partner_pos_kanban_available_in_pos" model="ir.ui.view">
+            <field name="name">res.partner.pos.kanban.inherit.available</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.res_partner_kanban_view"/>
+            <field name="arch" type="xml">
+                <field name="mobile" position="after">
+                    <field name="available_in_pos"/>
+                </field>
+                <xpath expr="//span[hasclass('oe_kanban_partner_links')]" position="inside">
+                    <span t-if="available_in_pos" class="badge badge-pill"><i class="fa fa-fw fa-check" role="img" aria-label="Available in POS" title="Available in POS"/></span>
+                </xpath>
+            </field>
+        </record> -->
+
+        <!-- <record id="view_partner_pos_kanban_available_in_pos" model="ir.ui.view">
+            <field name="name">res.partner.view.kanban.inherit.mail</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.res_partner_kanban_view"/>
+            <field name="arch" type="xml">
+                <field name="activity_state" position="after">
+                    <field name="available_in_pos"/>
+                </field>
+                <xpath expr="//span[hasclass('oe_kanban_partner_links')]" position="after">
+                    <field name="available_in_pos" widget="boolean_button"/>
+                </xpath>
+            </field>
+        </record> -->
+
+</odoo>
