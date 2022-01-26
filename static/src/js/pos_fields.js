@@ -1,4 +1,4 @@
-odoo.define('pos_customer_restriction.fields', function(require){
+odoo.define('pos_customer_restriction.pos_fields', function(require){
 "use strict";
 
     var models = require('point_of_sale.models');

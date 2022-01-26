@@ -1,4 +1,4 @@
-odoo.define('pos_customer_restriction.list', function (require) {
+odoo.define('pos_customer_restriction.pos_list', function (require) {
     'use strict';
     var rpc = require('web.rpc');
     var models = require('point_of_sale.models');
